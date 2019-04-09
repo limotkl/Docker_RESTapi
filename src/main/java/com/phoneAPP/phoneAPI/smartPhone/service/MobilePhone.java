@@ -1,17 +1,21 @@
-package com.phoneAPP.phoneAPI.smartPhone;
+package com.phoneAPP.phoneAPI.smartPhone.service;
 
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
+
+import com.phoneAPP.phoneAPI.smartPhone.model.Contact;
 
 //@Component
-@Controller
+@Service
 public class MobilePhone {
 	private ArrayList<Contact> phoneBook = new ArrayList<Contact>();
 	
 	public MobilePhone(){
-		phoneBook.add(new Contact("Fang","Li","9293971317","limotkl@gmail.com"));
+		phoneBook.add(new Contact(0,"Fang","Li","9293971317","limotkl@gmail.com"));
+		phoneBook.add(new Contact(1,"aaa","bb","9293971317","limotkl@gmail.com"));
 	}
 	private boolean isExist(Contact temp){
 		int first = 0;

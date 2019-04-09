@@ -1,4 +1,4 @@
-package com.phoneAPP.phoneAPI.smartPhone;
+package com.phoneAPP.phoneAPI.smartPhone.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,12 +13,15 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.phoneAPP.phoneAPI.smartPhone.model.Contact;
+import com.phoneAPP.phoneAPI.smartPhone.service.MobilePhone;
+
 @RestController
 public class PhoneResource {
 	@Autowired
 	private MobilePhone phone;
 	
-	@GetMapping("/getAllContact")
+	@GetMapping(path = "/getAllContact")
 	public ArrayList<Contact> getAllContact(){
 		return phone.getContact();
 	}
